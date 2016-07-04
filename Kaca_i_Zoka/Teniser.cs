@@ -1,0 +1,75 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Kaca_i_Zoka
+{
+     public class Teniser:Osoba
+    {
+        int rang;
+        List<RezultatnaTurniru> rezultatiNaTurnirima = new List<RezultatnaTurniru>();
+
+        //konstruktor
+        public Teniser(string ime, DateTime datumrodj, int rang, List<RezultatnaTurniru> rezultatiNaTurnirima) :base(ime,datumrodj)
+        {
+            this.rang = rang;
+            this.rezultatiNaTurnirima = rezultatiNaTurnirima;
+
+        }
+
+        public int Rang
+        {
+            get
+            {
+                return rang;
+            }
+
+            set
+            {
+                rang = value;
+            }
+        }
+
+        internal List<RezultatnaTurniru> RezultatiNaTurnirima
+        {
+            get
+            {
+                return rezultatiNaTurnirima;
+            }
+
+            set
+            {
+                rezultatiNaTurnirima = value;
+            }
+        }
+
+        public string prvaMetodaTeniser( Turnir turn)
+        {
+            string povratnaVrednost = "";
+
+            foreach (RezultatnaTurniru ReznaTur in RezultatiNaTurnirima)
+            {
+                if (ReznaTur.BrojOsvojenihBodova == turn.MaxBrojPoena)
+                {
+                    povratnaVrednost += "pobedio je, ";
+                }
+                else
+                {
+                    povratnaVrednost += "nije pobedio, ";
+                }
+
+            }
+            string vrstaturnira = turn.Vrsta.ToString();
+            povratnaVrednost += "vrsta turnira je " + vrstaturnira;
+
+            return povratnaVrednost;
+
+        }
+
+
+    }
+
+    
+}
