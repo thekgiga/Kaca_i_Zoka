@@ -190,7 +190,9 @@ namespace Kaca_i_Zoka
             }
         }
 
-        public 
+        //tekst devetog nemamo
+        
+       //nemamo ni 10u
     }
 
     
