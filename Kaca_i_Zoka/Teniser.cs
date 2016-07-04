@@ -32,7 +32,7 @@ namespace Kaca_i_Zoka
             }
         }
 
-        internal List<RezultatnaTurniru> RezultatiNaTurnirima
+        public List<RezultatnaTurniru> RezultatiNaTurnirima
         {
             get
             {

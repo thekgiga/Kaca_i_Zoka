@@ -65,7 +65,7 @@ namespace Kaca_i_Zoka
             }
         }
 
-        internal VrstaTurnira Vrsta
+        public VrstaTurnira Vrsta
         {
             get
             {
