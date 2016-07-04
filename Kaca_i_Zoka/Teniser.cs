@@ -68,7 +68,19 @@ namespace Kaca_i_Zoka
 
         }
 
+        public int drugaMetodaTeniser()
+        {
+            int broj = 0;
+            foreach (RezultatnaTurniru RezNaTurn in RezultatiNaTurnirima)
+            {
+                if(RezNaTurn.BrojOsvojenihBodova > RezNaTurn.Turnir.MaxBrojPoena / 2)
+                {
+                    broj += 1;
+                }
 
+            }
+            return  broj;
+        }
     }
 
     
