@@ -81,6 +81,25 @@ namespace Kaca_i_Zoka
             }
             return  broj;
         }
+
+        public string trecaMetodaTeniser()
+        {
+            string pov = "";
+            foreach (RezultatnaTurniru r in RezultatiNaTurnirima)
+            {
+                if (r.Turnir.Godina == 2016)
+                {
+                    pov += r.Turnir.Naziv+", ";
+
+                }
+
+            }
+
+            return pov;
+
+        }
+
+
     }
 
     
