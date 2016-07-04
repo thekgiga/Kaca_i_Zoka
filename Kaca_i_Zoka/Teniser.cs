@@ -117,6 +117,80 @@ namespace Kaca_i_Zoka
             }
            return prosek = zbir / count;
         }
+
+        public double petaMetodaTeniser()
+        {
+            int countAll = 0;
+            int znacajni = 0;
+
+            foreach (RezultatnaTurniru r in RezultatiNaTurnirima)
+            {
+                countAll++;
+                if (r.Turnir.MaxBrojPoena == r.BrojOsvojenihBodova)
+                {
+                    znacajni++;
+                }
+
+            }
+            return znacajni / countAll * 100;
+        }
+
+        public int sestaMetodaTeniser()
+        {
+            int zbir = 0;
+            foreach (RezultatnaTurniru r in RezultatiNaTurnirima)
+            {
+
+                zbir += r.Turnir.MaxBrojPoena;
+            }
+            return zbir;
+
+        }
+
+        public string sedmaMetodaTeniser()
+        {
+            List<string> lista = new List<string>();
+            string izlaz = "";
+
+            foreach (RezultatnaTurniru r in RezultatiNaTurnirima)
+            {
+                if (lista.Contains(r.Turnir.Naziv))
+                {
+                    lista.Add(r.Turnir.Naziv);
+                }
+            }
+
+            foreach (string s in lista)
+            {
+                izlaz += s + " ";
+            }
+            return izlaz;
+        }
+
+        public string osmaMetodateniser()
+        {
+            int brojZnacajnih = 0;
+
+            foreach (RezultatnaTurniru r in RezultatiNaTurnirima)
+            {
+                if (r.BrojOsvojenihBodova.Equals(r.Turnir.MaxBrojPoena))
+                {
+                    brojZnacajnih++;
+
+                }
+            }
+
+            if (brojZnacajnih >=2)
+            {
+                return "jeste";
+            }
+            else
+            {
+                return "nije";
+            }
+        }
+
+        public 
     }
 
     
