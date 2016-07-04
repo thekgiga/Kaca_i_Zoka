@@ -99,7 +99,24 @@ namespace Kaca_i_Zoka
 
         }
 
+        public double cetvrtaMetodaTeniser(Turnir.VrstaTurnira vrst)
+        {
+            double prosek = 0;
+            double zbir = 0;
+            int count = 0;
 
+            
+            foreach (RezultatnaTurniru r in RezultatiNaTurnirima)
+            {
+                if (r.Turnir.Vrsta.Equals(vrst))
+                {
+                    zbir += r.BrojOsvojenihBodova;
+                    count++;
+                }
+
+            }
+           return prosek = zbir / count;
+        }
     }
 
     
